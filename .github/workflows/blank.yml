@@ -1,0 +1,13 @@
+name: Echo Webhook
+
+on:
+  repository_dispatch:
+    types:
+      - push
+
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo Webhook
+        run: echo "Webhook empfangen"
